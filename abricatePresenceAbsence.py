@@ -74,9 +74,7 @@ for i in range(2,len(tsv.columns)):
 # convert df to binary
 bin_tsv = tsv
 for i in range(2,len(bin_tsv.columns)):
-    print(list(bin_tsv.iloc[0:len(bin_tsv.index), i]))
     bin_tsv.iloc[0:len(bin_tsv.index),i] = binary(list(bin_tsv.iloc[0:len(bin_tsv.index), i]))
-    print(list(bin_tsv.iloc[0:len(bin_tsv.index), i]))
 
 # write binary df to file
 bin_tsv.to_csv(binaytsv, sep='\t', encoding='utf-8')
